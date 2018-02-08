@@ -19,7 +19,7 @@ Instalasi di termux :
 - pip3 install rsa
 - pip3 install requests
 - pip3 install thrift
-- git clone http://github.com/tankeng/bottag/
+- git clone https://github.com/bynit149/tn9.2.3.38
 
 Run on termux :
 - cd bottag
