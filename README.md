@@ -22,5 +22,5 @@ Instalasi di termux :
 - git clone https://github.com/bynit149/tn9.2.3.38
 
 Run on termux :
-- cd bottag
+- cd tn9.2.3.38
 - python sb.py
