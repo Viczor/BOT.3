@@ -19,8 +19,8 @@ Instalasi di termux :
 - pip3 install rsa
 - pip3 install requests
 - pip3 install thrift
-- git clone https://github.com/
+- git clone https://github.com/Viczor/BOT.1.git
 
 Run on termux :
-- cd tn9.2.3.38
+- cd BOT.1
 - python sb.py
