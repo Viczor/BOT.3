@@ -47,7 +47,7 @@ while True:
                         if msg.toType == 2:
                             client.sendChatChecked(receiver, msg_id)
                             contact = client.getContact(sender)
-                            if text.lower() == 'ME':
+                            if text.lower() == 'me':
                                 client.sendMessage(receiver, None, contentMetadata={'mid': sender}, contentType=13)
                             elif text.lower() == 'sp':
                                 start = time.time()
