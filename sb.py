@@ -47,7 +47,7 @@ while True:
                         if msg.toType == 2:
                             client.sendChatChecked(receiver, msg_id)
                             contact = client.getContact(sender)
-                            if text.lower() == 'me':
+                            if text.lower() == 'ME':
                                 client.sendMessage(receiver, None, contentMetadata={'mid': sender}, contentType=13)
                             elif text.lower() == 'sp':
                                 start = time.time()
@@ -70,7 +70,7 @@ while True:
                                     client.sendImageWithURL(receiver, a)
                                 except Exception as e:
                                     client.sendText(receiver, str(e))
-                            elif text.lower() == 'แทก':
+                            elif text.lower() == 'แท็ก':
                                 group = client.getGroup(msg.to)
                                 nama = [contact.mid for contact in group.members]
                                 nm1, nm2, nm3, nm4, nm5, jml = [], [], [], [], [], len(nama)
@@ -123,7 +123,7 @@ while True:
                                         nm5 += [nama[m]]
                                     client.mention(msg.to, nm5)             
                                 client.sendText(receiver, "ห้องนี้มีสมาชิกทั้งหมด :"+str(jml))
-                            elif text.lower() == 'นับ':
+                            elif text.lower() == 'นับคนอ่าน':
                                 try:
                                     del cctv['point'][msg.to]
                                     del cctv['sidermem'][msg.to]
@@ -133,12 +133,12 @@ while True:
                                 cctv['point'][msg.to] = msg.id
                                 cctv['sidermem'][msg.to] = ""
                                 cctv['cyduk'][msg.to]=True
-                            elif text.lower() == 'อ่าน':
+                            elif text.lower() == 'แสดงชื่อคนอ่านตอนนี้':
                                 if msg.to in cctv['point']:
                                     cctv['cyduk'][msg.to]=False
                                     client.sendText(msg.to, cctv['sidermem'][msg.to])
                                 else:
-                                    client.sendText(msg.to, "พิมพ์คำว่า นับ ก่อน")
+                                    client.sendText(msg.to, "พิมพ์คำว่า นับคนอ่าน ก่อน")
                 except Exception as e:
                     client.log("[SEND_MESSAGE] ERROR : " + str(e))
 
