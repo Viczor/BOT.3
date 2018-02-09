@@ -1,12 +1,12 @@
 
 List Command Standart :
-- me
+- ME
 - sp
 - spic
 - scover
-- แทก
-- นับ
-- อ่าน
+- แท็ก
+- นับคนอ่าน
+- แสดงชื่อคนอ่านตอนนี้
 
 Required :
 - Hacker Keyboard (PlayStore)
@@ -19,7 +19,7 @@ Instalasi di termux :
 - pip3 install rsa
 - pip3 install requests
 - pip3 install thrift
-- git clone https://github.com/bynit149/tn9.2.3.38
+- git clone https://github.com/
 
 Run on termux :
 - cd tn9.2.3.38
