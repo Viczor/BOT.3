@@ -5,8 +5,8 @@ List Command Standart :
 - spic
 - scover
 - แท็ก
-- นับคนอ่าน
-- แสดงชื่อคนอ่านตอนนี้
+- นับ
+- หยุดนับ
 
 Required :
 - Hacker Keyboard (PlayStore)
@@ -19,8 +19,8 @@ Instalasi di termux :
 - pip3 install rsa
 - pip3 install requests
 - pip3 install thrift
-- git clone https://github.com/Viczor/BOT.1.git
+- git clone https://github.com/Viczor/BOT.2.git
 
 Run on termux :
-- cd BOT.1
+- cd BOT.2
 - python sb.py
