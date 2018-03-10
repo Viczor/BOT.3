@@ -27,7 +27,7 @@ while True:
                     if msg.toType == 2:
                         may = client.getProfile().mid
                         if may in str(msg.contentMetadata) and 'MENTION' in str(msg.contentMetadata):
-                            pilih = ['มึงจะแท็กเหี้ยไรนักหนา น่ารำคาน ไอควยยยย !!!','มึงว่างมากหรอ! ที่บ้านไม่มีคนคุยด้วยใช่มะ ? ตอบสิ','แท็กทำไม กูยังไม่ว่าง','มึงรีบมากหรอ รีบก็ทักส่วนตัวมา เดะกูว่างกูก็ไปเองละ ~.~','แท็กอะไรกันนักกันหนาว่ะ']
+                            pilih = ['[Auto Reply] ยังไม่สะดวกตอบแท็กจ้า','[Auto Reply] ระบบตอบแท็กอัตโนมัติจ้า เดี๋ยวกลับมาตอบ','[Auto Reply] แท็กทำไม ยังไม่ว่างตอบ','[Auto Reply]ธุระด่วน ตัวตัวมาเลจ้า','[Auto Reply]ยังไม่ว่างตอบ เสร็จธุระจะตอบกลับจ้า']
                             rslt = random.choice(pilih)
                             client.sendText(msg.to, str(rslt))
                         else:
@@ -123,7 +123,7 @@ while True:
                                         nm5 += [nama[m]]
                                     client.mention(msg.to, nm5)             
                                 client.sendText(receiver, "ห้องนี้มีสมาชิกทั้งหมด :"+str(jml))
-                            elif text.lower() == 'นับคนอ่าน':
+                            elif text.lower() == 'นับ':
                                 try:
                                     del cctv['point'][msg.to]
                                     del cctv['sidermem'][msg.to]
@@ -133,12 +133,12 @@ while True:
                                 cctv['point'][msg.to] = msg.id
                                 cctv['sidermem'][msg.to] = ""
                                 cctv['cyduk'][msg.to]=True
-                            elif text.lower() == 'แสดงชื่อคนอ่านตอนนี้':
+                            elif text.lower() == 'หยุดนับ':
                                 if msg.to in cctv['point']:
                                     cctv['cyduk'][msg.to]=False
                                     client.sendText(msg.to, cctv['sidermem'][msg.to])
                                 else:
-                                    client.sendText(msg.to, "พิมพ์คำว่า นับคนอ่าน ก่อน")
+                                    client.sendText(msg.to, "พิมพ์คำว่า หยุดนับ ก่อน")
                 except Exception as e:
                     client.log("[SEND_MESSAGE] ERROR : " + str(e))
 
