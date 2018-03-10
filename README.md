@@ -13,7 +13,7 @@ Required :
 - Termux (PlayStore)
 
 Instalasi di termux :
-- apt update && apt upgrade
+- apt update & apt upgrade
 - apt install python
 - apt install git
 - pip3 install rsa
