@@ -27,7 +27,7 @@ while True:
                     if msg.toType == 2:
                         may = client.getProfile().mid
                         if may in str(msg.contentMetadata) and 'MENTION' in str(msg.contentMetadata):
-                            pilih = ['[Auto Reply] ยังไม่สะดวกตอบแท็กจ้า','[Auto Reply] ระบบตอบแท็กอัตโนมัติจ้า เดี๋ยวกลับมาตอบ','[Auto Reply] แท็กทำไม ยังไม่ว่างตอบ','[Auto Reply] ธุระด่วน ตัวตัวมาเลยจ้า','[Auto Reply] ยังไม่ว่างตอบ เสร็จธุระจะตอบกลับจ้า'.'[Auto Reply] หลับอยู่ ธุระด่วนติดต่อส่วนตัว หรือคอลไลน์มาจ้า']
+                            pilih = ['[Auto Reply] ยังไม่สะดวกตอบแท็กจ้า','[Auto Reply] ระบบตอบแท็กอัตโนมัติจ้า เดี๋ยวกลับมาตอบ','[Auto Reply] แท็กทำไม ยังไม่ว่างตอบ','[Auto Reply] ธุระด่วน ตัวตัวมาเลยจ้า','[Auto Reply] ยังไม่ว่างตอบ เสร็จธุระจะตอบกลับจ้า'.'[Auto Reply] หลับอยู่ ธุระด่วนติดต่อส่วนตัวหรือคอลไลน์มาจ้า']
                             rslt = random.choice(pilih)
                             client.sendText(msg.to, str(rslt))
                         else:
